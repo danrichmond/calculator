@@ -38,7 +38,7 @@
 		37C04C841F5E093C00B9C0A2 = {
 			isa = PBXGroup;
 			children = (
-				37C04C8F1F5E093C00B9C0A2 /* Calculator1 */,
+				37C04C8F1F5E093C00B9C0A2 /* Calculator */,
 				37C04C8E1F5E093C00B9C0A2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -51,7 +51,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		37C04C8F1F5E093C00B9C0A2 /* Calculator1 */ = {
+		37C04C8F1F5E093C00B9C0A2 /* Calculator */ = {
 			isa = PBXGroup;
 			children = (
 				37C04C901F5E093C00B9C0A2 /* AppDelegate.swift */,
@@ -61,7 +61,7 @@
 				37C04C991F5E093C00B9C0A2 /* LaunchScreen.storyboard */,
 				37C04C9C1F5E093C00B9C0A2 /* Info.plist */,
 			);
-			path = Calculator1;
+			path = Calculator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 37C04C881F5E093C00B9C0A2 /* Build configuration list for PBXProject "Calculator1" */;
+			buildConfigurationList = 37C04C881F5E093C00B9C0A2 /* Build configuration list for PBXProject "Calculator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -303,7 +303,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37C04C881F5E093C00B9C0A2 /* Build configuration list for PBXProject "Calculator1" */ = {
+		37C04C881F5E093C00B9C0A2 /* Build configuration list for PBXProject "Calculator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37C04C9D1F5E093C00B9C0A2 /* Debug */,
