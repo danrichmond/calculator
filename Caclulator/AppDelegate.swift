@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Calculator1
+//  Caclulator
 //
-//  Created by Dan on 9/4/17.
+//  Created by Dan on 10/14/17.
 //  Copyright © 2017 Dan. All rights reserved.
 //
 
