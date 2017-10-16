@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             currentNumber = 0
             didCalculation = false
         }
+        
         if label.text == "0" {
             label.text = ""
         }
