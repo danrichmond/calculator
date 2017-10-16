@@ -26,6 +26,7 @@ class ViewController: UIViewController {
             currentNumber = 0
             didCalculation = false
         }
+        
         if label.text == "0" {
             label.text = ""
         }
@@ -81,6 +82,8 @@ class ViewController: UIViewController {
             previousNumber = 0
             currentNumber = 0
             operation = 0
+        } else if sender.tag == 20 {    // Copy button
+            UIPasteboard.general.string = label.text
         }
     }
 
