@@ -20,7 +20,7 @@
         <!--View Controller-->
         <scene sceneID="aOj-Vj-SMb">
             <objects>
-                <viewController id="neF-Y5-rkX" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="neF-Y5-rkX" customClass="ViewController" customModule="Caclulator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WLK-c6-fIZ"/>
                         <viewControllerLayoutGuide type="bottom" id="5Sz-5F-snf"/>

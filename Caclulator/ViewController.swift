@@ -15,11 +15,17 @@ class ViewController: UIViewController {
     var previousNumber:Double = 0
     var calculating = false
     var operation = 0
+    var didCalculation = false
     @IBOutlet weak var label: UILabel!
     
     // Handle a number being clicked
     @IBAction func numbers(_ sender: UIButton) {
         
+        if didCalculation == true {
+            label.text = "0"
+            currentNumber = 0
+            didCalculation = false
+        }
         if label.text == "0" {
             label.text = ""
         }
@@ -69,6 +75,7 @@ class ViewController: UIViewController {
                 label.text = String(Int(previousNumber) % Int(currentNumber))
             }
             calculating = false
+            didCalculation = true
         } else if sender.tag == 11 {
             label.text = "0"
             previousNumber = 0
