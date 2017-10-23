@@ -1,10 +1,8 @@
-//
 //  ViewController.swift
 //  Caclulator
 //
 //  Created by Dan on 10/14/17.
 //  Copyright © 2017 Dan. All rights reserved.
-//
 
 import UIKit
 
@@ -52,9 +50,10 @@ class ViewController: UIViewController {
     // Handle an operator button being pressed
     @IBAction func buttons(_ sender: UIButton) {
         
-        // If a button was pressed but not clear, equal, save, or copy
-        if label.text != "" && sender.tag != 11 && sender.tag != 12 && sender.tag != 19 && sender.tag != 20 {
-            
+        if sender.tag == 0 {
+            label.text = label.text! + "."
+            calculating = false
+        } else if label.text != "" && sender.tag != 11 && sender.tag != 12 && sender.tag != 19 && sender.tag != 20 { // Not clear, equal, save, or copy
             // Save the previous number
             previousNumber = Double(label.text!)!
             operation = sender.tag
@@ -62,17 +61,13 @@ class ViewController: UIViewController {
         } else if sender.tag == 12 {    // Equal
             if operation == 13 {        // Add
                 label.text = String(previousNumber + currentNumber)
-            }
-            else if operation == 14 {   // Subtract
+            } else if operation == 14 {   // Subtract
                 label.text = String(previousNumber - currentNumber)
-            }
-            else if operation == 15 {   // Multiply
+            } else if operation == 15 {   // Multiply
                 label.text = String(previousNumber * currentNumber)
-            }
-            else if operation == 16 {   // Divide
+            } else if operation == 16 {   // Divide
                 label.text = String(previousNumber / currentNumber)
-            }
-            else if operation == 17 {   // Remainder
+            } else if operation == 17 {   // Remainder
                 label.text = String(Int(previousNumber) % Int(currentNumber))
             }
             calculating = false
