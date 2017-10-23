@@ -36,7 +36,6 @@ class ViewController: UIViewController {
         } else {
             label.text = label.text! + String(sender.tag - 1)
             currentNumber = Double(label.text!)!
-            // What do I do with the decimal?
         }
     }
     
@@ -82,8 +81,6 @@ class ViewController: UIViewController {
         }
     }
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -93,7 +90,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
-
