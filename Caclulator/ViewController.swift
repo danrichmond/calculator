@@ -78,6 +78,8 @@ class ViewController: UIViewController {
             operation = 0
         } else if sender.tag == 20 {    // Copy button
             UIPasteboard.general.string = label.text
+        } else if sender.tag == 19 {
+            
         }
     }
 
