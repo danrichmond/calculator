@@ -14,11 +14,15 @@ class CalculationTableViewController: UITableViewController {
     
     var calculations = [Calculation]()
     
+    @IBOutlet weak var labelc: UILabel!
+    var name:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        if let nameToDisplay = name {
+            labelc.text = nameToDisplay
+        }
         // Load the sample data
         loadSampleCalculations()
         
