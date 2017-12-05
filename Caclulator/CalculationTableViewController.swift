@@ -14,11 +14,15 @@ class CalculationTableViewController: UITableViewController {
     
     var calculations = [Calculation]()
     
+    @IBOutlet weak var labelc: UILabel!
+    var name:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        if let nameToDisplay = name {
+            labelc.text = nameToDisplay
+        }
         // Load the sample data
         loadSampleCalculations()
         
@@ -116,6 +120,7 @@ class CalculationTableViewController: UITableViewController {
         guard let calc2 = Calculation(name: "Car+Insurance/month", value: "480") else {
             fatalError("Unable to instantiate calc2")
         }
+//        let calc3 = Calculation(name: "Yo", value: "111")
         calculations += [calc1, calc2]
     }
 

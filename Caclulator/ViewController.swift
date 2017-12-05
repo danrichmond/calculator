@@ -78,11 +78,26 @@ class ViewController: UIViewController {
             operation = 0
         } else if sender.tag == 20 {    // Copy button
             UIPasteboard.general.string = label.text
-        } else if sender.tag == 19 {
-            
         }
     }
 
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        //performSegue(withIdentifier: "secondVC", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let destination = segue.destination as? CalculationTableViewController {
+            guard let calc1 = Calculation(name: "Calc", value: label.text!) else {
+                fatalError("Unable to instantiate calc1")
+            }
+           // destination.calculations.append(calc1)
+            destination.calculations += [calc1]
+          // destination.calculations.insert(calc1, at: destination.calculations.count)
+            //destination.name = label.text
+           // destination.tableView.reloadData()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
