@@ -120,6 +120,7 @@ class CalculationTableViewController: UITableViewController {
         guard let calc2 = Calculation(name: "Car+Insurance/month", value: "480") else {
             fatalError("Unable to instantiate calc2")
         }
+//        let calc3 = Calculation(name: "Yo", value: "111")
         calculations += [calc1, calc2]
     }
 
