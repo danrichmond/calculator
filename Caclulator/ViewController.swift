@@ -91,10 +91,10 @@ class ViewController: UIViewController {
                 fatalError("Unable to instantiate calc1")
             }
            // destination.calculations.append(calc1)
-            destination.calculations += [calc1]
+            calculations += [calc1]
           // destination.calculations.insert(calc1, at: destination.calculations.count)
             //destination.name = label.text
-           // destination.tableView.reloadData()
+//           destination.tableView.reloadData()
         }
     }
     

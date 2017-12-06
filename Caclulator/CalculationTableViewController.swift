@@ -8,11 +8,13 @@
 
 import UIKit
 
+var calculations = [Calculation]()
+
 class CalculationTableViewController: UITableViewController {
     
     //MARK: Properties
     
-    var calculations = [Calculation]()
+    
     
     @IBOutlet weak var labelc: UILabel!
     var name:String?
@@ -114,14 +116,14 @@ class CalculationTableViewController: UITableViewController {
     //MARK: Private Methods
     
     private func loadSampleCalculations() {
-        guard let calc1 = Calculation(name: "Rent cost/month", value: "287") else {
-            fatalError("Unable to instantiate calc1")
-        }
-        guard let calc2 = Calculation(name: "Car+Insurance/month", value: "480") else {
-            fatalError("Unable to instantiate calc2")
-        }
+//        guard let calc1 = Calculation(name: "Rent cost/month", value: "287") else {
+//            fatalError("Unable to instantiate calc1")
+//        }
+//        guard let calc2 = Calculation(name: "Car+Insurance/month", value: "480") else {
+//            fatalError("Unable to instantiate calc2")
+//        }
 //        let calc3 = Calculation(name: "Yo", value: "111")
-        calculations += [calc1, calc2]
+//        calculations += [calc1, calc2]
     }
 
 }
