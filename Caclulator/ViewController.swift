@@ -6,6 +6,9 @@
 
 import UIKit
 
+var calcVal = ""
+var numberOfCalcs = 0
+
 class ViewController: UIViewController {
 
     // Variables
@@ -15,6 +18,7 @@ class ViewController: UIViewController {
     var operation = 0
     var didCalculation = false
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var calcName: UITextField!
     
     // Handle a number being clicked
     @IBAction func numbers(_ sender: UIButton) {
@@ -79,34 +83,27 @@ class ViewController: UIViewController {
         } else if sender.tag == 20 {    // Copy button
             UIPasteboard.general.string = label.text
         }
-//        else if sender.tag == 19 {
-//            guard let calc1 = Calculation(name: "Calc", value: label.text!) else {
-//                fatalError("Unable to instantiate calc1")
-//            }
-//            calculations += [calc1]
-//        }
-    }
-
-    @IBAction func saveButtonPressed(_ sender: UIButton) {
-        //performSegue(withIdentifier: "secondVC", sender: self)
-        guard let calc1 = Calculation(name: "Calc", value: label.text!) else {
-            fatalError("Unable to instantiate calc1")
-        }
-        calculations += [calc1]
+        
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if let destination = segue.destination as? CalculationTableViewController {
-//            guard let calc1 = Calculation(name: "Calc", value: label.text!) else {
-//                fatalError("Unable to instantiate calc1")
-//            }
-//           // destination.calculations.append(calc1)
-//            calculations += [calc1]
-//          // destination.calculations.insert(calc1, at: destination.calculations.count)
-//            //destination.name = label.text
-////           destination.tableView.reloadData()
-//        }
-//    }
+    @IBAction func save1Pressed(_ sender: UIButton) {
+        calcVal = label.text!
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        if calcName.text! == "" {
+            guard let calc = Calculation(name: "Calculation " + String(numberOfCalcs), value: calcVal) else {
+                fatalError("Unable to instantiate calc1")
+            }
+            calculations += [calc]
+        } else {
+            guard let calc1 = Calculation(name: calcName.text!, value: calcVal) else {
+                fatalError("Unable to instantiate calc1")
+            }
+            calculations += [calc1]
+        }
+        numberOfCalcs = numberOfCalcs + 1
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
